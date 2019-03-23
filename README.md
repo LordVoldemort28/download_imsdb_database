@@ -2,7 +2,7 @@
 ------------------
 
 IMSDB is a perfect database for movie scripts. And this python script allow to downlaod most of the movie script through api and html cleaning.
-<br />
+<br /><br />
 __Package Needed__
 * [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 ```shell
