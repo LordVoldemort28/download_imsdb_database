@@ -1,7 +1,7 @@
-![IMSDB Database](https://www.imsdb.com/)
+[IMSDB Database: Movies Script](https://www.imsdb.com/)
 ------------------
 
-__Package Needed__(Links added for pip)
+__Package Needed__
 * [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 ```shell
 $ pip install bs4
