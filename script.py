@@ -1,3 +1,13 @@
+
+#======================================================================
+#Author: Rahul Prajapati                File: download_script.py
+#Package: os, urllib.parse, requests, tqdm and bs4 
+#Date modified: 03/23/2019 
+#Link Used: https://github.com/j2kun/imsdb_download_all_scripts
+#Description: This script can download all latest script from imsdb.com
+#======================================================================
+
+#Imports
 import os
 
 try:
@@ -22,14 +32,6 @@ try:
 except IndexError:
     print("tqdm package needed!!!!")
     exit()
-
-#======================================================================
-#Author: Rahul Prajapati                File: download_script.py
-#Package: os, urllib.parse, requests, tqdm and bs4 
-#Date modified: 03/23/2019 
-#Link Used: https://github.com/j2kun/imsdb_download_all_scripts
-#Description: This script can download all latest script from imsdb.com
-#======================================================================
 
 #Constant defination
 BASE_URL = 'http://www.imsdb.com'
@@ -94,7 +96,7 @@ def movie_scripts(movie_url):
 
 #Main funtion starting from all script page to each movie page getting script
 #calculating error file which are unable to fetch
-def fetch_script():
+def main_function():
     number_of_file_downloaded = 0
     soup = get_response_text(ALL_SCRIPT_URL)
     paragraphs = soup_find_all(soup, 'all_script')
@@ -110,4 +112,4 @@ def fetch_script():
     print('Error fetching: '+ (int(len(number_of_file_downloaded)) - int(number_of_file_downloaded)))
             
 if __name__ == "__main__":
-    fetch_script()
+    main_function()
